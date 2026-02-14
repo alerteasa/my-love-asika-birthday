@@ -1,0 +1,159 @@
+body{
+  margin:0;
+  background:linear-gradient(135deg,#ff5f9e,#ff9a9e);
+  min-height:100vh;
+  overflow-y:auto;
+  color:white;
+  font-family:'Poppins', sans-serif;
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  text-align:center;
+  padding:30px 20px;
+}
+
+.show{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+h1,h2{
+  font-family:'Great Vibes', cursive;
+  letter-spacing:2px;
+}
+
+.text{
+  font-size:20px;
+  line-height:1.8;
+}
+
+button{
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#ff2d6f;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeIn 1.2s forwards;
+}
+
+.delay1{animation-delay:.6s;}
+.delay2{animation-delay:1.6s;}
+.delay3{animation-delay:2.6s;}
+.delay5{animation-delay:4.6s;}
+
+@keyframes fadeIn{
+  to{opacity:1;transform:none;}
+}
+
+.love{
+  animation:heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat{
+  50%{transform:scale(1.08);}
+}
+
+/* Floating hearts & fireflies */
+.heart,.fly{
+  position:fixed;
+  bottom:-20px;
+  animation:up 7s linear;
+}
+
+.fly{
+  background:rgba(255,255,255,0.7);
+  width:6px;height:6px;border-radius:50%;
+}
+
+@keyframes up{
+  to{transform:translateY(-120vh);opacity:0;}
+}
+
+/* Candle */
+.candle-big{
+  font-size:50px;
+  cursor:pointer;
+  margin:10px;
+}
+
+/* Cake */
+.cake{
+  position:relative;
+  margin:20px auto;
+  width:180px;
+  cursor:pointer;
+}
+
+.cake-top{
+  height:50px;
+  background:#ffc1d9;
+  border-radius:20px 20px 0 0;
+}
+
+.cake-base{
+  height:80px;
+  background:#ff8fab;
+  border-radius:0 0 20px 20px;
+}
+
+.knife{
+  position:absolute;
+  width:120px;
+  height:4px;
+  background:silver;
+  left:-140px;
+  top:60px;
+}
+
+.cut{
+  animation:cut 1.5s forwards;
+}
+
+@keyframes cut{
+  to{left:200px;}
+}
+
+/* Hidden */
+.hidden{display:none;}
+
+.memory{
+  margin-top:15px;
+  font-style:italic;
+}
+
+/* Love Text Container */
+#loveText{
+  white-space: pre-line;
+  max-width: 900px;
+  margin: 20px auto;
+  line-height: 1.9;
+  font-size: 20px;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Line-by-line animation */
+.letter-line{
+  opacity:0;
+  transform:translateY(10px);
+  animation: lineAppear 0.8s forwards;
+  margin-bottom:4px;
+}
+
+@keyframes lineAppear{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
